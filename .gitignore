@@ -1,3 +1,4 @@
 node_modules
 
-./DATABASE/database.db
+
+DATABASE/database.db
