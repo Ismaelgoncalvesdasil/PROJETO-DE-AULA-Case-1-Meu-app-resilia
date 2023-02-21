@@ -9,13 +9,14 @@ export async function listar(req, res) {
 
   export async function inserir(req,res) {
     const filmes = {
+      id: req.body.id,
       titulo: req.body.titulo,
       descricao: req.body.descricao,
       porcentagem: req.body.porcentagem
     }
     openDb()
     .then( db=>{
-      db.run( 'INSERT INTO filmes (titulo, descricao, porcentagem) VALUES (?, ?, ?)',[filmes.titulo, filmes.descricao, filmes.porcentagem])
+      db.run( 'INSERT INTO filmes (id,titulo, descricao, porcentagem) VALUES (?,?, ?, ?)',[filmes.id, filmes.titulo, filmes.descricao, filmes.porcentagem])
     })
     res.json({
       "statusCode": 200
