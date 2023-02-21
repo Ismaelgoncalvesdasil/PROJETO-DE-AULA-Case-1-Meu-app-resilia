@@ -1,4 +1,4 @@
-import { openDb } from '../confgDB.mjs';
+import { openDb } from '../confgDB.js';
 
 export async function createTables() {
   openDb().then((db) => {

@@ -2,8 +2,8 @@ import fs from 'fs';
 import https from 'https';
 import cors from 'cors';
 import express, { Router } from 'express'
-import { createTables } from './Models/Cerate.mjs';
-import router from '../routes.mjs';
+import { createTables } from './Models/Cerate.js';
+import router from '../routes.js';
 const app = express();
 app.use(express.json());
 app.use(router)
